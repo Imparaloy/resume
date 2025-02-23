@@ -1,159 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio - @skkhummun</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="skhummun.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - @skkhummun</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #ff9999, #ff66b2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600; /* ความหนาของฟอนต์ */
+        }
+        .image-placeholder {
+            background-image: url('imagepolor/polor.jpg');
+            background-size: cover;
+        }
+    </style>
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <a>S.</a>
+<body class="bg-white min-h-screen font-poppins">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-50 backdrop-blur-sm z-50 py-4">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <div class="logo">
+                <a class="text-2xl font-bold text-gray-800">S.</a>
+            </div>
+            <ul class="flex list-none gap-8">
+                <li><a href="#home" class="text-gray-800 font-medium hover:text-pink-400 transition-colors duration-300">Home</a></li>
+                <li><a href="#about" class="text-gray-800 font-medium hover:text-pink-400 transition-colors duration-300">About me</a></li>
+                <li><a href="#work" class="text-gray-800 font-medium hover:text-pink-400 transition-colors duration-300">Work</a></li>
+                <li><a href="#contact" class="text-gray-800 font-medium hover:text-pink-400 transition-colors duration-300">Contact</a></li>
+            </ul>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
     </nav>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <div class="text-content">
-                    <div class="username">@skhummun</div>
-                    <h1>portfolio.</h1>
-                    <h2 class="name">Sirikul Khummung</h2>
-                    <p class="description">
-                        <span class="highlight">Second-year</span> Information Technology student<br>
-                        at King Mongkut’s Institute of Technology Ladkrabang (KMITL).
-                    </p>
-                </div>
-                <div class="image-placeholder"></div>
-            </div>
-        </section>
-
-
-        <section id="about" class="about">
-            <div class="container">
-                <h3>about me.</h3>
-                <p class="about-text">
-                    Currently a second-year student at the <span class="highlight">Faculty of Information
-                        Technology</span>,
-                    specializing in <span class="highlight">Multimedia and Game Development</span> at
-                    <span class="highlight">King Mongkut's Institute of Technology Ladkrabang</span>.
-                    <br><br>
-                    I am passionate about <span class="highlight">UX/UI Design</span> and strive to create seamless,
-                    user-friendly digital experiences.
-                    <br><br>
-                    As a UX/UI Designer, I enjoy blending creativity with functionality to craft intuitive interfaces
-                    that enhance user interactions. I am always eager to learn, improve, and explore new design
-                    trends and technologies.
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="text-content max-w-1/2">
+                <div class="text-gray-600">@skhummun</div>
+                <h1 class="text-4xl text-gray-800 mb-4">portfolio.</h1>
+                <h2 class="gradient-text text-4xl mb-6">Sirikul Khummung</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    <span class="gradient-text font-bold">Second-year</span> Information Technology student<br>
+                    at King Mongkut’s Institute of Technology Ladkrabang (KMITL).
                 </p>
             </div>
-        </section>
+            <div class="image-placeholder w-72 h-72 rounded-lg"></div>
+        </div>
+    </section>
 
-        <section id="skills">
-            <h3>skills.</h3>
-            <div class="skills-container">
-                <div class="skill-icon">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png">
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h3 class="gradient-text text-3xl mb-6">about me.</h3>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Currently a second-year student at the <span class="gradient-text font-bold">Faculty of Information Technology</span>,
+                specializing in <span class="gradient-text font-bold">Multimedia and Game Development</span> at
+                <span class="gradient-text font-bold">King Mongkut's Institute of Technology Ladkrabang</span>.
+                <br><br>
+                I am passionate about <span class="gradient-text font-bold">UX/UI Design</span> and strive to create seamless,
+                user-friendly digital experiences.
+                <br><br>
+                As a UX/UI Designer, I enjoy blending creativity with functionality to craft intuitive interfaces
+                that enhance user interactions. I am always eager to learn, improve, and explore new design
+                trends and technologies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h3 class="gradient-text text-3xl mb-6">education.</h3>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-pink-400 text-left">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">King Mongkut's Institute of Technology Ladkrabang</h4>
+                    <p class="text-gray-600">Bachelor of Science in Information Technology</p>
+                    <p class="text-gray-600">2023 - Present</p>
                 </div>
-                <div class="skill-icon">
-                    <img src="https://ultimatecourses.com/assets/category/css-fcba6b473cb1125595dc28163be24eb673907258b5f6f6c82967a0587a9df20c.svg">
-                </div>
-                <div class="skill-icon">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpuYdLEzBvwemix8pwsncUkLLOQqnByncadg&s">
-                </div>
-                <div class="skill-icon">
-                    <img src="https://quantumzeitgeist.com/wp-content/uploads/pythoned.png">
-                </div>
-                <div class="skill-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/1051px-Adobe_Illustrator_CC_icon.svg.png">
-                </div>
-                <div class="skill-icon">
-                    <img src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxhfRM_njI7Pu32CmBLMdmnnzF6MdNHw4MJwlr.tSWLA2EJBQdZh0p3nNDzGvX2F6NoIc9ZSQ9xJqsGEg5bouOnA-&format=source&h=210">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-pink-400 text-left">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">joseph upatham school</h4>
+                    <p class="text-gray-600">High School</p>
+                    <p class="text-gray-600">2020 - 2023</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="gradient-text text-3xl mb-6">skills.</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="skill-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" class="w-16 h-16 mx-auto">
+                </div>
+                <div class="skill-icon">
+                    <img src="https://ultimatecourses.com/assets/category/css-fcba6b473cb1125595dc28163be24eb673907258b5f6f6c82967a0587a9df20c.svg" class="w-16 h-16 mx-auto">
+                </div>
+                <div class="skill-icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpuYdLEzBvwemix8pwsncUkLLOQqnByncadg&s" class="w-16 h-16 mx-auto">
+                </div>
+                <div class="skill-icon">
+                    <img src="https://quantumzeitgeist.com/wp-content/uploads/pythoned.png" class="w-16 h-16 mx-auto">
+                </div>
+                <div class="skill-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/1051px-Adobe_Illustrator_CC_icon.svg.png" class="w-16 h-16 mx-auto">
+                </div>
+                <div class="skill-icon">
+                    <img src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxhfRM_njI7Pu32CmBLMdmnnzF6MdNHw4MJwlr.tSWLA2EJBQdZh0p3nNDzGvX2F6NoIc9ZSQ9xJqsGEg5bouOnA-&format=source&h=210" class="w-16 h-16 mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="work" class="work">
-            <h3>work.</h3>
-            <div class="gallery">
-                <div class="card">
-                    <img src="imagepolor/firewallbus.png" alt="firewallbus webapp">
-                    <div class="card-content">
-                        <h2>FirewallBus66 Application UI design</h2>
+    <!-- Work Section -->
+    <section id="work" class="py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Work Experience (Activity-based) -->
+            <div class="text-center mb-12">
+                <h3 class="gradient-text text-3xl mb-4">Work Experience.</h3>
+                <h4 class="text-xl text-gray-600 mb-8 font-semibold">Work Experience (Activity-based)</h4>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-left hover:shadow-lg transition-shadow duration-300">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Pre-Programming 67</h4>
+                        <p class="text-gray-600"><strong>Role:</strong> Head of Activity</p>
+                        <p class="text-gray-600">Led a foundational Python programming workshop for first-year students, managing event operations and team coordination.</p>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="imagepolor/metagenius.png" alt="metagenius webapp">
-                    <div class="card-content">
-                        <h2>MetaGenius Application UI design</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-left hover:shadow-lg transition-shadow duration-300">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">IT3K 18</h4>
+                        <p class="text-gray-600"><strong>Role:</strong> Vice Head of Registration</p>
+                        <p class="text-gray-600">IT3K is a sports competition among IT faculties from the three King Mongkut’s Universities. Managed participant registration for an inter-university IT sports competition, hosted by our faculty for the first time.</p>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="imagepolor/smartcart.png" alt="smartcart webapp">
-                    <div class="card-content">
-                        <h2>Smartcart Application UI design</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-left hover:shadow-lg transition-shadow duration-300">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">ToBeIT’67 the second</h4>
+                        <p class="text-gray-600"><strong>Role:</strong> Head of Registration</p>
+                        <p class="text-gray-600">Organized registration for a high school IT camp featuring entrance exam prep and a Hackathon.</p>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="imagepolor/CTF.png" alt="CTF web">
-                    <div class="card-content">
-                        <h2>CTF Web</h2>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="imagepolor/cat_animation.png" alt="slide">
-                    <div class="card-content">
-                        <h2>Figma Animation</h2>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="imagepolor/EasyCompany.png" alt="easycompany">
-                    <div class="card-content">
-                        <h2>EasyCompany</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-left hover:shadow-lg transition-shadow duration-300">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">ITCamp 20</h4>
+                        <p class="text-gray-600"><strong>Role:</strong> Registration Staff</p>
+                        <p class="text-gray-600">Assisted in participant registration for KMITL’s flagship IT camp, covering Game Dev, Data Science, Networking, and Web Development.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="contact" class="contact">
-            <h3>contact us.</h3>
-            <div class="social-links">
-                <a href="mailto:skhummung@gmail.com" class="social-icon">
-                    <div class="social icon">
-                        <i class="fa-solid fa-envelope"></i>
+            <!-- UX/UI Experience (Project-based) -->
+            <div class="text-center">
+                <h4 class="text-xl text-gray-600 mb-8 font-semibold">UX/UI Experience (Project-based)</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <img src="imagepolor/firewallbus.png" alt="firewallbus webapp" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-gray-800 mb-2">FirewallBus66 Application UI design</h2>
+                            <p class="text-gray-600 text-left">Designed the web application interface for FirewallBus66, a location tracking app for songthaews. This app aims to improve the commuting experience by addressing common issues such as unpredictable arrival times and the inability to request a stop.</p>
+                        </div>
                     </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <img src="imagepolor/metagenius.png" alt="metagenius webapp" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-gray-800 mb-2">MetaGenius Application UI design</h2>
+                            <p class="text-gray-600 text-left">Designed the web application interface for MetaGenius, a smart gardening app that monitors plant health. This app works in conjunction with an intelligent plant pot to display real-time plant status and care recommendations.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <img src="imagepolor/smartcart.png" alt="smartcart webapp" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-gray-800 mb-2">Smartcart Application UI design</h2>
+                            <p class="text-gray-600 text-left">Designed the web application interface for Smartcart, an online shopping platform. The app allows users to browse products, place orders, and complete payments seamlessly.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <img src="imagepolor/CTF.png" alt="CTF web" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-gray-800 mb-2">CTF Web</h2>
+                            <p class="text-gray-600 text-left">Designed and Develop a website platform for generating quotations and tax calculations. Ensured a seamless user experience with an intuitive workflow for business operations.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <img src="imagepolor/cat_animation.png" alt="slide" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-gray-800 mb-2">Figma Animation</h2>
+                            <p class="text-gray-600 text-left">Created UI animations using Figma, enhancing user experience and interface interactions.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <img src="imagepolor/EasyCompany.png" alt="easycompany" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-gray-800 mb-2">EasyCompany</h2>
+                            <p class="text-gray-600 text-left">Designed a website platform for generating quotations and tax calculations. Ensured a seamless user experience with an intuitive workflow for business operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="gradient-text text-3xl mb-6">contact us.</h3>
+            <div class="flex justify-center gap-8 mt-8">
+                <a href="mailto:skhummung@gmail.com" class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-pink-400 hover:text-white transition-colors duration-300">
+                    <i class="fa-solid fa-envelope text-xl text-gray-800"></i>
                 </a>
-                <a href="https://github.com/Imparaloy" class="social-icon">
-                    <div class="social icon">
-                        <i class="fa-brands fa-github"></i>
-                    </div>
+                <a href="https://github.com/Imparaloy" class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-pink-400 hover:text-white transition-colors duration-300">
+                    <i class="fa-brands fa-github text-xl text-gray-800"></i>
                 </a>
-                <a href="https://www.facebook.com/sorsoricecube.1704" class="social-icon">
-                    <div class="social icon">
-                        <i class="fa-brands fa-facebook"></i>
-                    </div>
+                <a href="https://www.facebook.com/sorsoricecube.1704" class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-pink-400 hover:text-white transition-colors duration-300">
+                    <i class="fa-brands fa-facebook text-xl text-gray-800"></i>
                 </a>
-                <a href="https://instagram.com/__impeniparaloy/" class="social-icon">
-                    <div class="social icon">
-                        <i class="fa-brands fa-instagram"></i>
-                    </div>
+                <a href="https://instagram.com/__impeniparaloy/" class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-pink-400 hover:text-white transition-colors duration-300">
+                    <i class="fa-brands fa-instagram text-xl text-gray-800"></i>
                 </a>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 skhummun. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="py-6 bg-white border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-600">&copy; 2025 skhummun. All rights reserved.</p>
         </div>
     </footer>
 </body>
